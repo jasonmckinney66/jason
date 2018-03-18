@@ -1,0 +1,36 @@
+title: Blog Post
+hide: true
+taxonomies: false
+fields:
+  title:
+    type: title
+    display: Title
+    localizable: true
+  sub_title:
+    type: textarea
+    display: Subtitle
+    localizable: true
+  intro_image:
+    type: assets
+    display: Intro Image
+    container: main
+    folder: img
+    max_files: 1
+  hero_image:
+    type: assets
+    display: Hero Image
+    container: main
+    folder: img
+    max_files: 1
+  content:
+    type: redactor
+    display: Content
+    localizable: true
+    image_dir: assets/img/blog/
+  excerpt:
+    type: redactor
+    display: Excerpt
+    settings: Basic
+    container: main
+    folder: img/blog
+    restrict_assets: true

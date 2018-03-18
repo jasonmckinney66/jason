@@ -1,0 +1,174 @@
+{{ partial:header }}
+
+<div class="container">
+    
+
+	<article>
+		<div class="row">
+			<div class="small-12 medium-6 columns">
+			
+      			{{ assets:product_image }}
+					<img id="largeImage" class="thumbnail" src="{{ glide:url width="672" height="395" fit="crop" }}">
+				{{ /assets:product_image }}
+      			
+      			{{ if alternate_views }}
+				<div class="row small-up-2 medium-up-4 thumb-container">
+				{{ assets:alternate_views }}
+					<div id="thumbs" class="column column-block gutter-small">
+						<img src="{{ url }}" alt="{{ alt }}">
+					</div>
+				{{ /assets:alternate_views }}
+        		</div>
+        		{{ endif }}
+        		
+			</div>
+			
+      		<div class="small-12 medium-6 columns">
+      
+        		<h2>{{ title }}</h2>
+        		<p>{{ full_description }}</p>
+				<div class="row">
+					{{ if size }}
+					<div class="small-12 medium-4 columns">
+        				<label>Size</label>
+        				<select id="my-size">
+        					{{ size }}
+          					<option value="{{ value }}">{{ value }}</option>
+							{{ /size }}
+        				</select>
+        			</div>
+        			{{ endif }}
+        			{{ if color }}
+        			<div class="small-12 medium-4 columns">
+        				<label>Color</label>
+        				<select id="my-color">
+        					{{ color }}
+        						<option value="{{ value }}">{{ value }}</option>
+        					{{ /color }}
+        				</select>
+        			</div>
+        			{{ endif }}
+          			<div class="small-12 medium-4 columns">
+            			<label>Quantity</label>
+            			<input type="number" value="1" id="my-quantity">
+        			</div>
+				</div>
+				
+				<div class="row">
+					<div class="small-12 medium-12 columns">
+					{{ if !sale_price }}
+						<h3>${{ price }}</h3>
+					{{ else }}
+						<h3><span style="text-decoration: line-through;">${{ price }}</span> &nbsp;&nbsp; <span class="sale">${{ sale_price }}</span></h3>
+					{{ endif }}
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-12 medium-6 columns">
+					        		
+        		<button type="button" class="snipcart-add-item button large expanded" id="my-button" 
+        		 data-item-name="{{ title }}"
+        		 data-item-price="{{ if sale_price }}{{ sale_price }}{{ else }}{{ price }}{{ endif }}"
+        		 data-item-id="{{ id }}"
+        		 data-item-categories=""
+        		 data-item-weight="{{ item_weight }}"
+        		 data-item-quantity="1"
+        		 {{ if color }}
+        		 data-item-custom2-name="Color"
+        		 data-item-custom2-options="{{ color }}{{ value }}|{{ /color }}"
+        		 data-item-custom2-value="Red"
+        		 {{ endif }}
+        		 {{ if size }}
+        		 data-item-custom1-name="Size"
+        		 data-item-custom1-options="{{ size }}{{ value }}|{{ /size }}"
+        		 data-item-custom1-value="Small"
+        		 {{ endif }}
+        		 data-item-image="{{ site_settings:snipcart_root }}{{ asset:alternate_views }}{{ url }}{{ /asset:alternate_views }}"
+        		 data-item-url="{{ site_settings:snipcart_root }}{{ url }}">
+        		  Add to cart
+        		</button>
+        		
+        			</div>
+					<div class="small-12 medium-6 columns">
+						<a href="/products" class="button large hollow expanded">Continue Shopping</a>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="small-12 medium-12 columns">
+        				<div class="small secondary button-group">
+            				<a class="button"><i class="fab fa-facebook fa-2x"></i></a>
+            				<a class="button"><i class="fab fa-twitter-square fa-2x"></i></a>
+            				<a class="button"><i class="fab fa-google-plus-square fa-2x"></i></a>
+            				<a class="button"><i class="fab fa-pinterest-square fa-2x"></i></a>
+          				</div>
+          			</div>
+          		</div>
+          		
+        	</div>
+    	</div>
+    
+    	<section class="callout panel">
+    	<div class="row align-center">
+    		<div class="small-12 medium-10 columns">
+
+      			<ul class="tabs" data-tabs id="example-tabs">
+        			<li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Reviews</a></li>
+        			<li class="tabs-title"><a href="#panel2">Similar Products</a></li>
+      			</ul>
+      				
+      			<div class="tabs-content" data-tabs-content="example-tabs">
+      			
+        			<div class="tabs-panel is-active" id="panel1">
+          				<h4>Reviews</h4> 
+          				<small>(Powered by Disqus)</small>
+          				<div class="media-object stack-for-small">
+            				<div class="media-object-section">
+              					<img class="thumbnail" src="https://source.unsplash.com/user/vanschneider/200x200">
+            				</div>
+            			<div class="media-object-section">
+              				<h5>Mike Stevenson</h5>
+              				<p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you.</p>
+            			</div>
+          			</div>
+          			
+          			<div class="media-object stack-for-small">
+            			<div class="media-object-section">
+              				<img class="thumbnail" src="https://source.unsplash.com/user/vanschneider/200x200">
+            			</div>
+            			<div class="media-object-section">
+              				<h5>Mike Stevenson</h5>
+              				<p>I'm going to improvise. Listen, there's something you should know about me... about inception. An idea is like a virus, resilient, highly contagious. The smallest seed of an idea can grow. It can grow to define or destroy you</p>
+            			</div>
+          			</div>
+          
+          			<label>
+            			My Review
+            			<textarea placeholder="None"></textarea>
+          			</label>
+          			<button class="button">Submit Review</button>
+        		</div>
+        		
+        		<div class="tabs-panel" id="panel2">
+          			<div class="row small-up-2 medium-up-4">
+          			
+            			<div class="column column-block gutter-small">
+              				{{ partial:product-card }}
+            			</div>
+            			<div class="column column-block gutter-small">
+            				{{ partial:product-card }}
+            			</div>
+            			<div class="column column-block gutter-small">
+            				{{ partial:product-card }}
+            			</div>
+            			
+            		</div>
+        		</div>
+        		
+      		</div>
+      		</section>
+      		
+    	</div>
+
+	</article>
+</div>

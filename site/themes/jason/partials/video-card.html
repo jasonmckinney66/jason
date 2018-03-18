@@ -1,0 +1,20 @@
+<div class="card" data-equalizer-watch>
+	<div class="img-holder">
+		{{ if new }}
+		<div class="ribbon-wrapper-green">
+			<div class="ribbon-green">NEW</div>
+		</div>
+		{{ endif }}
+		
+		<a href="https://player.vimeo.com/video/{{ video_id }}?color=ffffff&title=0&byline=0&portrait=0" data-fancybox ><img src="https://i.vimeocdn.com/video/{{ thumb_id }}_330.jpg"></a>
+		
+	</div>
+	
+	<div class="card-section">
+		<h5><strong>{{ title }}</strong></h5>
+		<small>{{ date_group }}</small>
+		<p>{{ short_description }}</p>
+	</div>
+	<a href="https://player.vimeo.com/video/{{ video_id }}?color=ffffff&title=0&byline=0&portrait=0" data-fancybox="video" class="button expanded">Play</a>
+	
+</div>
