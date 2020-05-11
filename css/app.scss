@@ -1,6 +1,32 @@
 @import url(/css/foundation.min.css);
 @import url(https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap);
-section#panel1 { background-color: #d53838; }
-section#panel2 { background-color: #f3f3f3; }
 body { font-family: 'Raleway', Helvetica, sans-serif;}
-.top-bar, .top-bar ul { background: none; }
+section {
+    height:100vh;
+    min-height:100vh;
+    padding: 4em 0;
+    &#panel1 { 
+        background-color: #d53838; 
+            p { 
+                color: white; 
+            }
+    }
+    &#panel2 { 
+        background-color: #f3f3f3; 
+            p { 
+                color: w#666; 
+            }
+    }
+}
+.top-bar, .top-bar ul { 
+    background: none; 
+}
+p {
+    font-size: 18px;
+}
+.tabs {
+    margin: 0;
+    border: none;
+    background: none;
+    list-style-type: none;
+}
