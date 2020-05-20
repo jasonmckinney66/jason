@@ -8,59 +8,286 @@
     <link rel="stylesheet" href="css/app.min.css">
   </head>
   <body>
-    <div data-sticky-container id="top">
-      <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium" data-sticky data-options="marginTop:0;">
-        <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
-        <div class="title-bar-title">Menu</div>
-      </div>
-      
-      <div class="top-bar" id="responsive-menu">
-        <div class="top-bar-left">
-          <ul class="dropdown menu" data-dropdown-menu>
-            <li class="menu-text"><a href="#top">Jason McKinney</a></li>
-          </ul>
-        </div>
-        <div class="top-bar-right">
-          <ul class="menu" data-smooth-scroll data-offset="50">
-            <li><a href="#panel1">Experience</a></li>
-            <li><a href="#panel2">Work</a></li>
-            <li><a href="#panel3">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <section id="panel1">
-      <div class="grid-container">
-        <div class="grid-x grid-padding-x align-center">
-          <div class="small-12 large-8 cell text-center">
-            <p>Hi. I’m a <span>creative director</span> <span>graphic designer</span> and <span>web developer</span>
-              I’m currently the creative director at Blue Coast in the SF bay area.</p>
-          </div>
-        </div>
-    </section>
-    <section id="panel2">
-      <div class="grid-container">
-        <div class="grid-x grid-padding-x">
-          <div class="large-6 cell">
-            <h1>Experience</h1>
-            <h2>Brands I've Helped</h2>
-          </div>
-          <div class="large-6 cell text-right">
-            <ul class="tabs" data-tabs id="example-tabs">
-              <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Tab 1</a></li>
-              <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">Tab 2</a></li>
+    <header>
+      <div class="off-canvas-wrapper">
+        <!-- Mobile Off-Canvas -->
+          <div class="off-canvas position-right" id="offCanvas" data-off-canvas>
+            <div class="close">
+              <button class="close-button" aria-label="Close Menu" type="button" data-close >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <ul class="vertical menu">
+              <li><a href="#section2" data-close>Experience</a></li>
+              <li><a href="#section3" data-close>Work</a></li>
+              <li><a href="#section4" data-close>Contact</a></li>
             </ul>
           </div>
-          <div class="tabs-content" data-tabs-content="example-tabs">
+          
+          <!-- Desktop -->
+          <div class="off-canvas-content" data-off-canvas-content>
+            <div data-sticky-container>
+              <div data-sticky data-options="marginTop:0;">
+                <div class="top-bar">
+                  <div class="top-bar-left show-for-medium" id="example-menu">
+                      <ul class="menu show-for-medium">
+                        <li class="menu-text"><a href="#top">Jason McKinney</a></li>
+                      </ul>
+                  </div>
+          
+                  <div class="top-bar-right show-for-medium">
+                    <ul class="menu">
+                      <li><a href="#section2">Experience</a></li>
+                      <li><a href="#section3">Work</a></li>
+                      <li><a href="#section4">Contact</a></li> 
+                    </ul>
+                  </div>
+
+                  <!-- Mobile Top Nav -->
+                  <div class="menu hide-for-medium">
+                    <a href="#top">Jason McKinney</a>
+                  </div>
+                  <div class="hide-for-medium">
+                    <a data-toggle="offCanvas" class="float-right hamburger">&#x2630;</a>
+                  </div>
+                </div><!--/top-bar-->
+              </div><!--/sticky-container-->
+          </div><!--/off-canvas-content-->
+    </header>
+
+    <section id="section1">
+      <div class="grid-container">
+        <div class="grid-x grid-padding-x align-center">
+          <div class="small-12 medium-8 cell text-center text-block">
+            <p>Hi. I’m a <span>creative director,</span> <span>graphic designer,</span> and <span>web developer.</span><br>I’m currently the creative director at <a href="https://bluecoastweb.com" target="_blank">Blue Coast</a> in the SF bay area.</p>
+          </div>
+        </div>
+    </section>
+    <section id="section2">
+      <div class="grid-container">
+        <div class="grid-x grid-padding-x align-bottom">
+          <div class="small-12 medium-6 cell">
+            <h1 class="meta">Experience</h1>
+            <h2 class="main">Brands I've Helped</h2>
+          </div>
+          <div class="small-12 medium-6 cell">
+            <ul class="tabs" data-tabs id="logos">
+              <li class="tabs-title is-active"><a data-tabs-target="panel1" href="#panel1" aria-selected="true">B to C</a></li>
+              <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">B to B</a></li>
+              <li class="tabs-title"><a data-tabs-target="panel3" href="#panel3">Non Profit</a></li>
+            </ul>
+          </div>
+          <div class="tabs-content" data-tabs-content="logos">
             <div class="tabs-panel is-active" id="panel1">
-              <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+              <div class="grid-x grid-padding-x small-up-2 medium-up-3 align-center">
+                <div class="cell"><img src="img/logo-cr.png"></div>
+                <div class="cell"><img src="img/logo-republic-of-tea.png"></div>
+                <div class="cell"><img src="img/logo-baja-fresh.png"></div>
+                <div class="cell"><img src="img/logo-ax.png"></div>
+                <div class="cell"><img src="img/logo-big-dogs.png"></div>
+                <div class="cell"><img src="img/logo-gnarly.png"></div>
+                <div class="cell"><img src="img/logo-journeys.png"></div>
+                <div class="cell"><img src="img/logo-shcp.png"></div>
+                <div class="cell"><img src="img/logo-shutterfly.png"></div>
+              </div>
             </div>
             <div class="tabs-panel" id="panel2">
-              <p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+              <div class="grid-x grid-padding-x small-up-2 medium-up-3 align-center">
+                <div class="cell"><img src="img/logo-orbital.png"></div>
+                <div class="cell"><img src="img/logo-redis.png"></div>
+                <div class="cell"><img src="img/logo-optovue.png"></div>
+                <div class="cell"><img src="img/logo-krux.png"></div>
+                <div class="cell"><img src="img/logo-transpak.png"></div>
+                <div class="cell"><img src="img/logo-decision-lens.png"></div>
+                <div class="cell"><img src="img/logo-cloud-physics.png"></div>    
+              </div>
+            </div>
+            <div class="tabs-panel" id="panel3">
+              <div class="grid-x grid-padding-x small-up-2 medium-up-3 align-center">
+                <div class="cell"><img src="img/logo-stanley-smith.png"></div>
+                <div class="cell"><img src="img/logo-ucsf.png"></div>
+                <div class="cell"><img src="img/logo-whistlestop.png"></div>
+                <div class="cell"><img src="img/logo-shcp.png"></div>   
+              </div>
             </div>
           </div>
         </div>
     </section>
+    <section id="section3">
+      <div class="grid-container">
+        <div class="grid-x grid-padding-x align-center">
+          <div class="small-12 cell text-center">
+            <h1 class="meta">Work</h1>
+            <h2 class="main">20+ years of interactive design & development</h2>
+          </div>
+        </div>
+        <div class="grid-x grid-padding-x medium-margin-collapse">
+          <div class="small-12 cell full">
+            <div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit data-auto-play="false">
+              <div class="orbit-wrapper">
+                <div class="orbit-controls">
+                  <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
+                  <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
+                </div>
+                <ul class="orbit-container">
+                  <li class="is-active orbit-slide">
+                    <div class="grid-x grid-padding-x align-center">
+                      <div class="small-12 medium-6 cell text-right border-right">
+                        <img src="img/bc-logo.png">
+                        <h5>Creative Director</h5>
+                      </div>
+                      <div class="small-12 medium-4 cell">
+                        <h3>2012 - Present</h3>
+                        <p>Responsibilities</p>
+                        <ul>
+                          <li>Creative Direction</li>
+                          <li>Concept Development</li>
+                          <li>Communication Strategy</li>
+                          <li>User Experience</li>
+                          <li>Interactive Design</li>
+                          <li>CMS Development</li>
+                        </ul>   
+                      </div>
+                    </div>
+                  </li>
+                  <li class="orbit-slide">
+                    <div class="grid-x grid-padding-x align-center">
+                      <div class="small-12 medium-6 cell text-right border-right">
+                        <img src="img/bloom-logo.png">
+                        <h5>Senior Partner</h5>
+                      </div>
+                      <div class="small-12 medium-4 cell">
+                        <h3>2004 - 2012</h3>
+                        <p>Responsibilities</p>
+                        <ul>
+                          <li>Operation Management</li>
+                          <li>Creative Direction</li>
+                          <li>Communication Strategy</li>
+                          <li>Interactive Design</li>
+                          <li>CMS Development</li>
+                        </ul>   
+                      </div>
+                    </div>
+                  </li>
+                  <li class="orbit-slide">
+                    <div class="grid-x grid-padding-x align-center">
+                      <div class="small-12 medium-6 cell text-right border-right">
+                        <img src="img/marketlive.png">
+                        <h5>Senior Designer</h5>
+                      </div>
+                      <div class="small-12 medium-4 cell">
+                        <h3>1998 - 2004</h3>
+                        <p>Responsibilities</p>
+                        <ul>
+                          <li>eCommerce Strategy</li>
+                          <li>Interactive Design</li>
+                          <li>UI Design</li>
+                        </ul>   
+                      </div>
+                    </div>
+                  </li>
+                  <li class="orbit-slide">
+                    <div class="grid-x grid-padding-x align-center">
+                      <div class="small-12 medium-6 cell text-right border-right">
+                        <img src="img/cd-logo.png">
+                        <h5>Senior Animator/Designer</h5>
+                      </div>
+                      <div class="small-12 medium-4 cell">
+                        <h3>1995 - 1998</h3>
+                        <p>Responsibilities</p>
+                        <ul>
+                          <li>3d Object Modeling</li>
+                          <li>3d Animation & Rendering</li>
+                          <li>Video Compositing</li>
+                          <li>Story Boarding</li>
+                        </ul>   
+                      </div>
+                    </div>
+                  </li>
+                  <li class="orbit-slide">
+                    <div class="grid-x grid-padding-x align-center">
+                      <div class="small-12 medium-6 cell text-right border-right">
+                        <img src="img/academy.png">
+                      </div>
+                      <div class="small-12 medium-4 cell">
+                        <h3>1992 - 1996</h3>
+                        <p>Emphasis</p>
+                        <ul>
+                          <li>Commercial Photography</li>
+                          <li>Studio Lighting</li>
+                          <li>Graphic Design</li>
+                          <li>Business Practices</li>
+                        </ul>   
+                      </div>
+                    </div>
+                  </li>
+
+                </ul>
+              </div>
+              <nav class="orbit-bullets">
+                <button class="is-active" data-slide="0"><span class="show-for-sr">First slide details.</span></button>
+                <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
+                <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
+                <button data-slide="3"><span class="show-for-sr">Forth slide details.</span></button>
+                <button data-slide="4"><span class="show-for-sr">Fifth slide details.</span></button>
+              </nav>
+            </div>
+
+          </div>
+        </div>
+    </section>
+    <section id="section4">
+      <div class="grid-container">
+
+        <div class="grid-x grid-padding-x">
+          <div class="small-12 cell text-center">
+            <h1 class="meta">Contact</h1>
+            <h2 class="main">Let's chat about how we can work together.</h2>
+          </div>
+        </div>
+
+        <div class="grid-x align-center">
+          <div class="container">
+            <div class="flex-row cell">
+              <div class="flex-column">
+                <div class="hide-for-small-only"><img class="grid-img" srcset="img/jason-aiga@2x.png 2x, img/jason-aiga.png 1x" src="img/jason-aiga.png"></div>
+              </div>
+              <div class="flex-column">
+                <div class="flex-row cell">
+                  <div class="flex-column">
+                    <div><img class="grid-img" srcset="img/jason-workstation@2x.png 2x, img/jason-workstation.png 1x" src="img/jason-workstation.png"></div>
+                  </div>
+                  <div class="flex-column">
+                    <div class="contact-name text-right center-for-small">
+                      <h3>Jason McKinney</h3>
+                    </div>
+                  </div>
+                  <div class="flex-column">
+                    <div class="contact-info text-left center-for-small">
+                      <p>(415) 299-0617<br>
+                      San Rafael, CA</p>
+                      <a href="https://linkedin.com/in/jasonpmckinney" target="_blank"><img src="img/linkedin.png" width="30"></a>
+                      <a href="mailto:j@jasonmckinney.com"><img src="img/email.png" width="30"></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex-row cell">
+                  <div class="flex-column">
+                    <div class="hide-for-small-only"><img class="grid-img" srcset="img/jason-bike@2x.png 2x, img/jason-bike.png 1x" src="img/jason-bike.png"></div>
+                  </div>
+                  <div class="flex-column">
+                    <div class="hide-for-small-only"><img class="grid-img" srcset="img/jason-headshot@2x.png 2x, img/jason-headshot.png 1x" src="img/jason-headshot.png"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </div><!-- /off canvas wrapper -->
 
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/foundation.min.js"></script>
