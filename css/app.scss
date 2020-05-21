@@ -40,7 +40,7 @@ section {
             }
             :focus { outline: #f17777; }
             background-image: url(../img/jason.png);
-            background-position: 50% 0;
+            background-position: 50% 30%;
             background-repeat: no-repeat;
             background-size: 563px 575px;
     }
@@ -156,6 +156,11 @@ p {
     -webkit-filter: grayscale(0%);
     opacity: 1;
   }
+.job-info {
+    background-color: #6d85af70;
+    padding: 1em 1em 2em 2em;
+    border-radius: 6px;
+}
 
 .cell img:hover {
     filter: none;
