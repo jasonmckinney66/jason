@@ -9,10 +9,9 @@ body, h1, h2, h3, h4, h5 { font-family: 'Raleway', Helvetica, sans-serif;}
 }
 .main {
     font-size: 32px;
-    text-transform: lowercase;
 }
 p span {
-    background-color: #c33333;
+    background-color: #c3333399;
     padding: .3em .6em;
     border-radius: 4px;
     white-space: nowrap;
@@ -36,10 +35,9 @@ section {
             }
             .text-block {
                 position: absolute;
-                bottom: 2em;
             }
             :focus { outline: #f17777; }
-            background-image: url(../img/jason.png);
+            background-image: url(../img/jason-2.png);
             background-position: 50% 30%;
             background-repeat: no-repeat;
             background-size: 563px 575px;
@@ -264,6 +262,19 @@ a:focus, a:hover {
     margin: 0;
     }   
 }
-
-
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    section#section1 .text-block { 
+        bottom: 10%;
+    }
+}
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {
+    section#section1 .text-block { 
+        bottom: 15%;
+    }
+}
+@media screen and (min-width: 75em) {
+    section#section1 .text-block { 
+        bottom: 20%;
+    }
+}
 @import url(/css/foundation.min.css);
