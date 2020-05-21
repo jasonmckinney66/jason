@@ -5,17 +5,14 @@ body, h1, h2, h3, h4, h5 { font-family: 'Raleway', Helvetica, sans-serif;}
 }
 small {
     text-transform: uppercase;
-    color: #8a8a8a;
+    color: #bbb;
     display: block;
     margin-top: 2em;
 }
-small a {
-    color: #50688f;
+small a, small a:visited, small a:active  {
+    color: #bbb;
 }
-small a:hover {
-    color: #50688f;
-}
-small a:visited {
+small a:hover  {
     color: #50688f;
 }
 .meta {
