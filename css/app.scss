@@ -1,5 +1,8 @@
 @import url(https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap);
 body, h1, h2, h3, h4, h5 { font-family: 'Raleway', Helvetica, sans-serif;}
+#body {
+    opacity: 0;
+}
 .meta {
     font-size: 18px;
     text-transform: uppercase;
