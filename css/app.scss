@@ -134,7 +134,7 @@ p {
 .tabs-title>a:focus, .tabs-title>a[aria-selected=true] {
     background: none;
     color: #d53838;
-    text-decoration: underline;
+    border-bottom: 1px dotted #d53838;
     outline: none;
     padding: 10px 24px;
 }
@@ -146,7 +146,8 @@ p {
 }
 .tabs-title>a:hover {
     background: none;
-    text-decoration: underline;
+    color: #d53838;
+    border-bottom: 1px dotted #d53838;
 }
 .tabs-content {
     border: none;
@@ -155,18 +156,40 @@ p {
     -webkit-transition: all .5s ease;
     transition: all .5s ease;
 }
-
 .tabs-content img {
     filter: gray;
     -webkit-filter: grayscale(100%); /* Chrome 19+ & Safari 6+ */
     opacity: .6;
 }
-
 .tabs-content img:hover {
     filter: none;
     -webkit-filter: grayscale(0%);
     opacity: 1;
   }
+
+  @-webkit-keyframes fadeIn {
+    from {
+      opacity: 0; }
+  
+    to {
+      opacity: 1; } }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0; }
+  
+    to {
+      opacity: 1; } }
+  
+  .tabs-content > .tabs-panel {
+    display: none;
+    opacity: 0; }
+  .tabs-content > .tabs-panel.is-active {
+    display: block;
+    -webkit-animation: fadeIn .4s;
+    animation: fadeIn .4s;
+    opacity: 1; 
+}
 .job-info {
     background-color: #6d85af70;
     padding: 1em 1em 2em 2em;
