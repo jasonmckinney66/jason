@@ -195,7 +195,37 @@ p {
     padding: 1em 1em 2em 2em;
     border-radius: 6px;
 }
-
+.connect {
+    svg {
+        width: 30px;
+        fill-rule:evenodd;
+        clip-rule:evenodd;
+        float: left;
+        margin-right: .5em;
+    }
+    svg path#background {
+        fill: #333333;
+    }
+    svg path#icon {
+        fill: #bbb;
+    }
+}
+.connect svg#linkedin:hover {
+    path#background {
+        fill:#346DA6;
+    }
+    path#icon {
+        fill:#ffffff;
+    }
+}
+.connect svg#email:hover {
+    path#background {
+        fill: #d53838;
+    }
+    path#icon {
+        fill:#ffffff;
+    }
+}
 .cell img:hover {
     filter: none;
     opacity: 1;
@@ -296,7 +326,10 @@ a:focus, a:hover {
     .contact-info {
     padding: 0;
     margin: 0;
-    }   
+    }
+    .connect svg {
+        float: none;
+    }  
 }
 @media screen and (min-width: 40em) and (max-width: 63.9375em) {
     section#section1 .text-block { 
